@@ -10,8 +10,10 @@ import java.util.Optional;
 public class MemberService {
 
     // 회원 서비스를 만드려면, 리포지토리가 당연히 있어야 할 것!
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
     /**
      * 회원 가입
      */
