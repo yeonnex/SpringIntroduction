@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
 public class MemoryMemberRepository implements MemberRepository {
     // 실무에서는 동시성 문제가 있을 수 있어서, 아래의 store 처럼
     // 공유되는 변수에서는 ConcurrentHashMap 을 써야 한다.
